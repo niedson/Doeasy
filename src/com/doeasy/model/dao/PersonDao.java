@@ -9,5 +9,5 @@ import com.doeasy.model.vo.Person;
 @Repository
 public interface PersonDao extends CrudRepository<Person, Long> {
      
-    public List<Person> findBySurname(String surname);
+    public List<Person> findByName(String name);
 }
