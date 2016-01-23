@@ -13,21 +13,14 @@
      
     <bean id="dataSource"
         class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName">
-            <value>org.postgresql.Driver</value>
+        <property name="driverClassName" value="org.postgresql.Driver" />
+        <property name="url"  >
+        	<value>jdbc:postgresql://ec2-54-225-165-132.compute-1.amazonaws.com:5432/d7bjlqlsqo94h2</value>
         </property>
-        <property name="url">
-            <value>jdbc:postgresql://ec2-54-225-165-132.compute-1.amazonaws.com:5432/d7bjlqlsqo94h2</value>
-        </property>
-        <property name="username">
-            <value>cocfcksgzsvmwb</value>
-        </property>
-        <property name="password">
-            <value>dDq5J4IXmjPJYBlcorv9kypiAT</value>
-        </property>
-        
+        <property name="username" value="cocfcksgzsvmwb" />
+        <property name="password" value="dDq5J4IXmjPJYBlcorv9kypiAT" />
+         
     </bean>
-  
     <bean id="entityManagerFactory"
         class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="dataSource" />
@@ -40,9 +33,7 @@
                 <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
                 <prop key="hibernate.show_sql">false</prop>
                 <prop key="hibernate.format_sql">false</prop>
-                <prop key="hibernate.hbm2ddl.auto">create</prop>
-                <prop key="hibernate.hbm2ddl.auto">create</prop>
-                
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
             </props>
         </property>
     </bean>
