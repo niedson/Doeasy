@@ -9,7 +9,7 @@ public class DoeasyHelloWord {
 	
 	@RequestMapping("/welcome")
 	public ModelAndView helloWord() {
-		String message = "<br><div style='text-align:center;'>"
+		String message = "<br><div style='text-align:center;'>" 
 				+ "<h3>********** Welcome Page</h3></div><br><br>";
 		return new ModelAndView("welcome", "message", message);
 	}	
